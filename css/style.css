@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url("../img/fondo.jpg");
+    background-size: cover;
+}
+section{
+    width: 90%;
+    height: 750px;
+    margin: 120px;
+    display: flex;
+    justify-content: center;
+}
+.cont-botones{
+    width: 50%;
+    text-align: center;
+    padding: 40px;
+    border: 4px solid aqua;
+}
+.cont-figura{
+    width: 50%;
+    text-align: center;
+    padding: 40px;
+    border: 4px solid aqua;
+}
+h2{
+    color: aqua;
+    font-size: 40px;
+    margin-bottom:30px;
+}
+.cont-botones button{
+    background: white;
+    color:black;
+    padding: 12px 30px;
+    border: 1px solid aqua;
+    margin: 10px;
+    transition: .5s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.cont-botones button{
+    transform: scale(1.2);
+    background: black ;
+    color: white; 
+}
+.cont-figura #figura{
+    width: 220px;
+    height: 220px;
+    background: purple;
+    margin: 40px auto;
+}
+#figura.circulo{
+    border-radius: 50%;
+    transition: 1s;
+}
+#figura.rectangulo{
+    width: 500px;
+    background: white;
+    transition: 1s;
+}
+#figura.degradado{
+    background-image: linear-gradient(#FF0099,#493240);
+    transition: 1s;
+    height: 220px;
+    width: 220px;
+    border-radius: 50%;
+}
+#figura.gif{
+    background: url("../img/colocar.gif");
+    background-size: cover;
+    height: 500px;
+    width: 500px;
+
+}
+#figura.arriba{
+    transform: translateY(-100px);
+    transition: 1s;
+    background: #493240;
+}
+#figura.abajo{
+    transform: translateY(100px);
+    transition: 1s;
+}
+#figura.derecha{
+    transform: translateX(100px);
+    transition: 1s;
+}
+#figura.izquierda{
+    transform: translateX(-100px);
+    transition: 1s;
+}
+#figura.diagonal{
+    transform: translateY(100px) translateX(100px);
+    transition: 1s;
+    background: #493240;
+}
+#figura.onda{
+    border-radius: 50%;
+    animation: ondas 10s infinite;
+}
+@keyframes ondas{
+    0%{
+      transform: scale(1);
+      background: url("../img/transicion1.gif");
+      background-size: cover;
+    }
+    25%{
+        transform: scale(1.3);
+        background: url("../img/transicion2.gif");
+        background-size: cover;
+    }
+    50%{
+        transform: scale(1.5);
+        background: url("../img/transicion3.gif");
+        background-size: cover;
+    }
+    75%{
+        transform: scale(1.3);
+        background: url("../img/transicion4.gif");
+        background-size: cover;
+    }
+    100%{
+        transform: scale(1);
+        background: url("../img/transicion5.gif");
+        background-size: cover;
+    }
+}
+.panel{
+    position: absolute;
+    top: 0%;
+    left: -500%;
+    width: 300px;
+    height: 130vh;
+    background: rgb(127, 42, 184);
+    text-align: left;
+    padding-top: 50px;
+    padding-left: 50px;
+    z-index: 999;
+    transition: 1s;
+}
+.panel a{
+    display: block;
+    width: 30%;
+    padding: 10px 30px;
+    margin: 24px 0;
+    background: rgb(0, 180, 204);
+    color: rgb(255, 255, 255);
+}
+.panel.active{
+    left: 0;
+
+}
+#modal{
+    width: 100%;
+    height: 120vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.466);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: none;
+}
+.cont-login{
+    padding: 50px 120px;
+    background: rgb(155, 0, 134);
+    border-radius: 40px;
+    text-align: center;
+    position: relative;
+}
+.cont-login input{
+    display: block;
+    width: 80%;
+    padding: 10px 20px;
+    margin: 10px auto;
+    background: #0018a0;
+}
+.cont-login button{
+    background: #0018a0;
+    color: rgb(255, 255, 255);
+    padding: 10px 40px;
+}
+#cerrar{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: transparent;
+}
+#modal.activo{
+    display: flex;
+}
+
+
+
+
+
+
